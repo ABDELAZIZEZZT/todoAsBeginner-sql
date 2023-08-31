@@ -1,63 +1,62 @@
 <?php
 session_start();
 
-include 'function.php';
-include 'validation.php';
+
+include '../oop/validation.php';
+
 
 $errors=[];
+$val=new validation;
 
-
-if(checkRequestMethod("POST")&& checkPostInput("username")){
+if($val->checkRequestMethod("POST")&& $val->checkPostInput("username")){
 
     foreach($_POST as $key => $valu)
     {
-        $$key=sanitizeInput($valu);
+        $$key=$val->sanitizeInput($valu);
     }
 
 
-    if(!requiredVal($username)){
+    if(!$val->requiredVal($username)){
         $errors[]= "name is required ";
-    }else if(!minVal($username,4)){
+    }else if(!$val->minVal($username,4)){
         $errors[]= "name mast be greater than 4 chars";
-    }else if(!maxVal($username,25)){
+    }else if(!$val->maxVal($username,25)){
         $errors[]= "name mast be smaller than 12 chars";
     }
 
-    if(!validUserName($username)){
+    if(!$val->validUserName($username)){
         $errors[]= "this user name not valid ";
     }
 
 
 
-    if(!requiredVal($email)){
+    if(!$val->requiredVal($email)){
         $errors[]= "email is required ";
-    }else if(!emailVal($email)){
+    }else if(!$val->emailVal($email)){
         $errors[]= "plase typa valid email";
     }
-    if(!validUserEmail($email)){
+    if(!$val->validUserEmail($email)){
         $errors[]= "this email not valid becase it used";
     }
 
 
 
-    if(!requiredVal($password)){
+    if(!$val->requiredVal($password)){
         $errors[]= "password is required ";
-    }else if(!minVal($password,6)){
+    }else if(!$val->minVal($password,6)){
         $errors[]= "password mast be greater than 6 chars";
-    }else if(!maxVal($password,25)){
+    }else if(!$val->maxVal($password,25)){
         $errors[]= "password mast be smaller than 12 chars";
     }
-    if(!checkPassword($password)){
-        $errors[]= "password mast has spichal charchter or upercase ";
-    }
+   
 
 
 
 
-    if(!requiredVal($confirm_password)){
+    if(!$val->requiredVal($confirm_password)){
         $errors[]= "confirm password is required ";
     }
-    if(!checkComfirm_Password($confirm_password,$password)){
+    if(!$val->checkComfirm_Password($confirm_password,$password)){
         $errors[]= "confirm password mast be si,milar to password";
     }
 
@@ -103,3 +102,4 @@ if(checkRequestMethod("POST")&& checkPostInput("username")){
 else{
     echo "not supported method<br>";
 }
+//Zezonasssar113

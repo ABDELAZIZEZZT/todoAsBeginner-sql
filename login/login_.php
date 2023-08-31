@@ -1,22 +1,24 @@
 <?php
 
 session_start();
-include 'validation.php';
+
+include '../oop/validation.php';
 
 $error_1=null;
 
-if(checkRequestMethod("POST")&& checkPostInput("email")){
+$val=new validation;
+if($val->checkRequestMethod("POST")&& $val->checkPostInput("email")){
 
     foreach($_POST as $key => $valu)
     {
-        $$key=sanitizeInput($valu);
+        $$key=$val->sanitizeInput($valu);
     }
 
-    if(!searchInDB_email($email)){
+    if(!$val->searchInDB_email($email)){
         $error_1[]= "your email not required please register ";
     }
 
-    if(!searchInDB($email,$password)){
+    if(!$val->searchInDB($email,$password)){
         $error_1[]= "wrong password ";
     }
 

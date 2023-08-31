@@ -1,0 +1,7 @@
+Functional Programming - Embracing Composition and Immutability
+
+Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. The core concepts of functional programming include functions as first-class citizens, immutability, and higher-order functions.
+
+In functional programming, functions are like building blocks that can be combined to create more complex functionality. This composability leads to code that is easier to reason about and maintain. Immutability, a key principle, ensures that once a piece of data is created, it cannot be modified. This eliminates many common sources of bugs related to shared state.
+
+Higher-order functions enable the creation of functions that take other functions as arguments or return them. This supports powerful abstractions and allows for code that is concise and expressive. Pure functions, a cornerstone of functional programming, always produce the same output for the same input and have no side effects, making them easy to test and reason about.

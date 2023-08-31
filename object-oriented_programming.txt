@@ -1,0 +1,7 @@
+Object-Oriented Programming - Modeling Reality in Code
+
+Object-oriented programming (OOP) is a programming paradigm that revolves around the concept of objects, which are instances of classes. These objects encapsulate data and behavior, allowing developers to model real-world entities and their interactions in a structured manner.
+
+The core principles of OOP include encapsulation, inheritance, and polymorphism. Encapsulation refers to bundling data and the methods that operate on that data into a single unit, preventing direct access and manipulation from external sources. Inheritance allows for the creation of new classes that inherit attributes and behaviors from existing classes, promoting code reuse. Polymorphism enables objects of different classes to be treated as objects of a common superclass, facilitating flexibility and extensibility.
+
+Languages like Java, C++, and Python provide robust support for OOP. OOP is particularly suited for modeling complex systems where different entities have distinct properties and behaviors that can be represented as objects with their own methods and attributes

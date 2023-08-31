@@ -1,0 +1,5 @@
+Procedural Programming - Step-by-Step Problem Solving
+
+Procedural programming is a programming paradigm centered around the concept of procedures or routines. It emphasizes breaking down a program into smaller, reusable pieces called functions or procedures, each of which represents a specific task. These functions are executed in a linear order, often reflecting the steps needed to solve a problem.
+
+In procedural programming, data is usually organized into data structures, and functions operate on this data to produce the desired outcome. The focus is on algorithms and control flow, with an emphasis on sequencing and branching. While procedural programming can be less abstract than other paradigms, it can lead to clear and structured code that is easy to follow.
